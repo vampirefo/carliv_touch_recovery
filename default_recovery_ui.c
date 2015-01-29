@@ -27,7 +27,7 @@ int touchY = 0;
 
 char* MENU_HEADERS[] = { NULL };
 
-char* MENU_ITEMS[] = { "Reboot Phone",
+char* MENU_ITEMS[] = { "Reboot Tablet",
                        "Install zip",
                        "Wipe Menu",
                        "Backup/Restore",
