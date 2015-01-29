@@ -1,4 +1,4 @@
-**Version 3.0 kitkat**
+**Version Intel X86**
 
 This is a modified **full touch** version of **CWM Recovery 6.0.5.1** from cm-11.0 branch. Use it with CM-11.0 building environment.
 My main goal was to bring up a light but features rich recovery with touch support. All the other existent touch recoveries (TWRP, PhilZ, Miui) are just too big for the very small recovery partition that we find in most of MTK phones.
@@ -33,6 +33,7 @@ ____
 
 For MTK phones, there is need of another flag in BoardConfig `BOARD_HAS_MTK := true` to activate MTK specific functions. 
 
+For X86 Tablets
 ____
 
 You don't need to change anything to add your credits in build, because the code will add it from your computer with shell, like in building kernels: it will print on screen "**Compiled by yourusername@yourhostname on: date**".
