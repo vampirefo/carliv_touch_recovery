@@ -46,7 +46,7 @@ RECOVERY_NAME := Carliv Touch Recovery
 endif
 endif
 
-RECOVERY_VERSION := $(RECOVERY_NAME) v3.0_kitkat
+RECOVERY_VERSION := $(RECOVERY_NAME) Intel X86
 
 LOCAL_CFLAGS += -DRECOVERY_VERSION="$(RECOVERY_VERSION)"
 RECOVERY_API_VERSION := 2
@@ -136,6 +136,11 @@ endif
 
 LOCAL_STATIC_LIBRARIES += libminui libpixelflinger_static libpng libcutils liblog
 LOCAL_STATIC_LIBRARIES += libstdc++ libc
+
+#libpixelflinger_static for x86 is using encoder under hardware/intel/apache-harmony
+ifeq ($(TARGET_ARCH),x86)
+LOCAL_STATIC_LIBRARIES += libenc
+endif
 
 LOCAL_STATIC_LIBRARIES += libselinux
 LOCAL_STATIC_LIBRARIES += libcrypto_static
